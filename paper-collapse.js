@@ -22,7 +22,7 @@
         } else {
           if (settings.closeOthers === true) {
             $('.collapse-card').removeClass('active');
-            $('.collapse-card').find('.body').slideUp(settings.animationDuration, settings.onHideComplete);
+            $('.collapse-card').find('.collapse-card__body').slideUp(settings.animationDuration, settings.onHideComplete);
           }
           settings.onShow.call(this);
           $(this).closest('.collapse-card').addClass('active');
