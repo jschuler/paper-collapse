@@ -28,12 +28,6 @@
   z-index: 200;
   margin: 1rem -1rem;
 }
-.collapse-card.active .collapse-card__heading:hover::after {
-  content: "\f066";
-}
-.collapse-card .collapse-card__heading:hover::after {
-  content: "\f065";
-}
 
 .collapse-card__heading {
   cursor: pointer;
