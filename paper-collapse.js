@@ -20,6 +20,10 @@
           $(this).closest('.collapse-card').removeClass('active');
           $(this).closest('.collapse-card').find('.collapse-card__body').slideUp(settings.animationDuration, settings.onHideComplete);
         } else {
+          if (settings.closeOthers === true) {
+            $('.collapse-card').removeClass('active');
+            $('.collapse-card').find('.body').slideUp(settings.animationDuration, settings.onHideComplete);
+          }
           settings.onShow.call(this);
           $(this).closest('.collapse-card').addClass('active');
           $(this).closest('.collapse-card').find('.collapse-card__body').slideDown(settings.animationDuration, settings.onShowComplete);
@@ -30,6 +34,7 @@
     $.fn.paperCollapse.defaults = {
       animationDuration: 400,
       easing: 'swing',
+      closeOthers: true,
       closeHandler: '.collapse-card__close_handler',
       onShow: function() {},
       onHide: function() {},
